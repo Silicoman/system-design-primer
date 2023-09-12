@@ -2,7 +2,7 @@
 
 **Aider [à la traduction](TRANSLATIONS.md) du guide!**
 
-# The System Design Primer
+# Introduction à la conception des systèmes
 
 <p align="center">
   <img src="images/jj3A5N8.png">
@@ -51,47 +51,48 @@ Quelques chapitres complémentaires pour se préparer aux entretiens:
   <br/>
 </p>
 
-The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.
+
+[Le jeu de cartes mémos Anki ](https://apps.ankiweb.net/) utilise la répétition pour vous aider à retenir les concepts clefs de la conception des systèmes.
 
 * [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
 * [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
 * [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
 
-Great for use while on-the-go.
+Idéal pour vos trajets.
 
-### Coding Resource: Interactive Coding Challenges
+### Coding Resource: Les codes challenges
 
-Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
+Recherchez vous une resource pour vous aider à préparer [**un entretien de code**](https://github.com/donnemartin/interactive-coding-challenges)?
 
 <p align="center">
   <img src="images/b4YtAEN.png">
   <br/>
 </p>
 
-Check out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), which contains an additional Anki deck:
+Jetez un coup d'oeil au dépôt voisin [**Les Codes Challenges**](https://github.com/donnemartin/interactive-coding-challenges), qui contient des decks Anki additionnelles:
 
 * [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
 
-## Contributing
+## Contributions
 
-> Learn from the community.
+> Apprendre de la communauté.
 
-Feel free to submit pull requests to help:
+Sentez vous libre de soumettre une pull requests pour aider:
 
-* Fix errors
-* Improve sections
-* Add new sections
-* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
+* Corriger les erreurs
+* Améliorer les sections
+* Ajouter des nouvelles sections
+* [Traduction](https://github.com/donnemartin/system-design-primer/issues/28)
 
-Content that needs some polishing is placed [under development](#under-development).
+Le contenu qui a besoin d'être améliorer est placé en [under development](#under-development).
 
-Review the [Contributing Guidelines](CONTRIBUTING.md).
+Relisez le [le guide des contributions](CONTRIBUTING.md).
 
-## Index of system design topics
+## Sommaire des sujets de conception de système
 
-> Summaries of various system design topics, including pros and cons.  **Everything is a trade-off**.
+> Résumés des nombreux sujets de conception de système, incluant des avis favorables et défavorables.  **Tout est une question de compromis**.
 >
-> Each section contains links to more in-depth resources.
+> Chaque section contient des liens vers des ressources pour approfondir.
 
 <p align="center">
   <img src="images/jrUBAF7.png">
@@ -180,105 +181,105 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 * [Contact info](#contact-info)
 * [License](#license)
 
-## Study guide
+## Guide d'apprentissage
 
-> Suggested topics to review based on your interview timeline (short, medium, long).
+> Suggestions de sujets à consulter basé sur la chronologie de vos entretiens (courte, moyenne, longue terme).
 
 ![Imgur](images/OfVllex.png)
 
-**Q: For interviews, do I need to know everything here?**
+**Q: Pour des entretiens, dois-je connaitre tout ce qu'il y a ici?**
 
-**A: No, you don't need to know everything here to prepare for the interview**.
+**A: Non, vous n'avez pas à connaître tout pour se préparer à un entretien.**
 
-What you are asked in an interview depends on variables such as:
+Ce que vous devez répondre à un entretien dépend de plusieurs variables telles que:
 
-* How much experience you have
-* What your technical background is
-* What positions you are interviewing for
-* Which companies you are interviewing with
-* Luck
+* L'expérience que vous avez
+* Quel est votre parcours technique
+* Pour quel poste vous prétentez
+* pour quelle entreprise vous candidatez
+* La chance
 
-More experienced candidates are generally expected to know more about system design.  Architects or team leads might be expected to know more than individual contributors.  Top tech companies are likely to have one or more design interview rounds.
+On attend généralement des candidats expérimentés qu'ils aient une plus grande connaissance de la conception des systèmes.
+On attend des architectes ou des responsables d'équipes d'en connaître plus qu'un simple contributeur. Le top des entreprises technologiques ont tendances à faire une ou plusieurs entretiens successives sur la conception des systèmes.
 
-Start broad and go deeper in a few areas.  It helps to know a little about various key system design topics.  Adjust the following guide based on your timeline, experience, what positions you are interviewing for, and which companies you are interviewing with.
+Commencez par une approche générale et rentrer en profondeur dans quelques thèmes.
+Ca vous aidera à avoir de petites connaissances dans plein de sujets de conception différents. Ajustez le guide en fonction de votre chronologie des entretiens,  votre expérience, le poste pour lequel vous candidatez et l'entreprise visée.
 
-* **Short timeline** - Aim for **breadth** with system design topics.  Practice by solving **some** interview questions.
-* **Medium timeline** - Aim for **breadth** and **some depth** with system design topics.  Practice by solving **many** interview questions.
-* **Long timeline** - Aim for **breadth** and **more depth** with system design topics.  Practice by solving **most** interview questions.
+* **Préparation courte terme** - Visez **large** sur les sujets de conception de système.  Exercez vous en répondant à **quelques** questions d'entretien.
+* **Préparation moyen terme** - Visez **large** et **approfondir un peu** sur les sujets de conception de système. Exercez vous en répondant à **beaucoup** de questions d'entretien.
+* **Préparation long terme** - Viez **large** et **approfondir le plus possible** sur les sujets de conception de système. Exercez vous en répondant au **maximum** de questions d'entretien.
 
-| | Short | Medium | Long |
+| | Court | Moyen | Long |
 |---|---|---|---|
-| Read through the [System design topics](#index-of-system-design-topics) to get a broad understanding of how systems work | :+1: | :+1: | :+1: |
-| Read through a few articles in the [Company engineering blogs](#company-engineering-blogs) for the companies you are interviewing with | :+1: | :+1: | :+1: |
-| Read through a few [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
-| Review [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
-| Work through [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Some | Many | Most |
-| Work through [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Some | Many | Most |
-| Review [Additional system design interview questions](#additional-system-design-interview-questions) | Some | Many | Most |
+| Lire [System design topics](#index-of-system-design-topics) pour avoir une version large de la conception des systèmes | :+1: | :+1: | :+1: |
+| Lire quelques articles sur [Company engineering blogs](#company-engineering-blogs) des entreprises que vous candidatez | :+1: | :+1: | :+1: |
+| Lire [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
+| Parcourir [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
+| Travailler [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | peu | beaucoup | maximum |
+| Travailler [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | peu | beaucoup | maximum |
+| Parcourir [Additional system design interview questions](#additional-system-design-interview-questions) | peu | beaucoup | maximum |
 
-## How to approach a system design interview question
+## Comment aborder les questions sur la conception des systèmes en entretien
+> Comment aborder les questions sur la conception des systèmes en entretien.
 
-> How to tackle a system design interview question.
+L'entretien de conception des systèmes est une **conversation ouverte**. Vous êtes censé la diriger.
 
-The system design interview is an **open-ended conversation**.  You are expected to lead it.
+Vous pouvez suivre les étapes suivantes pour cadrer la discussion. Pour aider à solidifier le processus, travailler la section [System design interview questions with solutions](#system-design-interview-questions-with-solutions).
 
-You can use the following steps to guide the discussion.  To help solidify this process, work through the [System design interview questions with solutions](#system-design-interview-questions-with-solutions) section using the following steps.
+### Etape 1: Décrire les cas d'usage, les contraintes et les hypothèses
 
-### Step 1: Outline use cases, constraints, and assumptions
+Rassemblez les exigences et délimitez le périmètre du problème. Posez des questions pour clarifier les cas d'usages et les contraintes. Discutez des hypothèses.
 
-Gather requirements and scope the problem.  Ask questions to clarify use cases and constraints.  Discuss assumptions.
+* Qui va l'utiliser?
+* Comment elle va être utiliser?
+* Combien d'utilisateurs?
+* Que doit faire le système?
+* Quels sont les entrants et les sorties du système?
+* Quelle quantité de données en prévision est à traiter?
+* Combien de requêtes par seconde sont attendues?
+* Quel est le ratio de lecture/écriture attendu?
 
-* Who is going to use it?
-* How are they going to use it?
-* How many users are there?
-* What does the system do?
-* What are the inputs and outputs of the system?
-* How much data do we expect to handle?
-* How many requests per second do we expect?
-* What is the expected read to write ratio?
+### Etape 2: Créer une conception haut niveau
 
-### Step 2: Create a high level design
+Décrivez une conception de haut niveau avec tous les composants importants.
 
-Outline a high level design with all important components.
+* Esquissez les composants principaux et leurs connexions
+* Justifiez vos idées
 
-* Sketch the main components and connections
-* Justify your ideas
+### Etape 3: Concevoir les composants principaux
 
-### Step 3: Design core components
+Plongez dans les détails de chaque composant principal. Par exemple, si on vous demande de [design a url shortening service](solutions/system_design/pastebin/README.md), discutez de:
 
-Dive into details for each core component.  For example, if you were asked to [design a url shortening service](solutions/system_design/pastebin/README.md), discuss:
+* Générer et conserver le hash d'une url complète
+    * [MD5](solutions/system_design/pastebin/README.md) et [Base62](solutions/system_design/pastebin/README.md)
+    * La collision du hachage
+    * SQL ou NoSQL
+    * Schéma de base de données
+* Traduction de l'url haché en une url complète
+    * la recherche en base de données
+* API et la conception orientée objet
 
-* Generating and storing a hash of the full url
-    * [MD5](solutions/system_design/pastebin/README.md) and [Base62](solutions/system_design/pastebin/README.md)
-    * Hash collisions
-    * SQL or NoSQL
-    * Database schema
-* Translating a hashed url to the full url
-    * Database lookup
-* API and object-oriented design
+### Etape 4: Mise à l'échelle de la conception
 
-### Step 4: Scale the design
-
-Identify and address bottlenecks, given the constraints.  For example, do you need the following to address scalability issues?
+Identifiez et adressez les goulots d'étranglements, étant donné les contraintes. Par exemple, devez-vous adresser les problèmes suivants de mise à l'échelle?
 
 * Load balancer
-* Horizontal scaling
-* Caching
-* Database sharding
+* Scalabilité horizontale
+* Mise en cache
+* Fragmentation de la base de données (*Database sharding*)
 
-Discuss potential solutions and trade-offs.  Everything is a trade-off.  Address bottlenecks using [principles of scalable system design](#index-of-system-design-topics).
+Discutez des solutions potentielles et des compromis. Tout est une question de compromis. Addressez les goulots en utilisant [principles of scalable system design](#index-of-system-design-topics).
 
-### Back-of-the-envelope calculations
-
-You might be asked to do some estimates by hand.  Refer to the [Appendix](#appendix) for the following resources:
+###  Calculs de coin table
+On vous demandera peut être d'estimer à la volée les couts, les latences. Reférez vous à [Appendix](#appendix) pour les ressources suivantes:
 
 * [Use back of the envelope calculations](http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)
 * [Powers of two table](#powers-of-two-table)
 * [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
 
-### Source(s) and further reading
+### Source(s) et lectures d'approfondissement
 
-Check out the following links to get a better idea of what to expect:
+Jetez un oeil aux liens pour avoir une meilleur idée à quoi s'attendre:
 
 * [How to ace a systems design interview](https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/)
 * [The system design interview](http://www.hiredintech.com/system-design)
@@ -287,9 +288,9 @@ Check out the following links to get a better idea of what to expect:
 
 ## System design interview questions with solutions
 
-> Common system design interview questions with sample discussions, code, and diagrams.
+> Questions d'entretien sur les conceptions classiques de système, avec des extraits de discussions, de code et des digrammes.
 >
-> Solutions linked to content in the `solutions/` folder.
+> Les liens des solutions pointent vers le contenu du répertoire `solutions/`.
 
 | Question | |
 |---|---|
@@ -303,61 +304,61 @@ Check out the following links to get a better idea of what to expect:
 | Design a system that scales to millions of users on AWS | [Solution](solutions/system_design/scaling_aws/README.md) |
 | Add a system design question | [Contribute](#contributing) |
 
-### Design Pastebin.com (or Bit.ly)
+### Concevoir Pastebin.com (ou Bit.ly)
 
-[View exercise and solution](solutions/system_design/pastebin/README.md)
+[Voir l'exercice et la solution](solutions/system_design/pastebin/README.md)
 
 ![Imgur](images/4edXG0T.png)
 
-### Design the Twitter timeline and search (or Facebook feed and search)
+### Concevoir la chronologie Twitter et la recherche (ou Facebook *feed* et la recherche)
 
-[View exercise and solution](solutions/system_design/twitter/README.md)
+[Voir l'exercice et la solution](solutions/system_design/twitter/README.md)
 
 ![Imgur](images/jrUBAF7.png)
 
-### Design a web crawler
+### Concevoir un web crawler
 
-[View exercise and solution](solutions/system_design/web_crawler/README.md)
+[Voir l'exercice et la solution](solutions/system_design/web_crawler/README.md)
 
 ![Imgur](images/bWxPtQA.png)
 
-### Design Mint.com
+### Concevoir Mint.com
 
-[View exercise and solution](solutions/system_design/mint/README.md)
+[Voir l'exercice et la solution](solutions/system_design/mint/README.md)
 
 ![Imgur](images/V5q57vU.png)
 
-### Design the data structures for a social network
+### Concevoir une structure de données d'un réseau social
 
-[View exercise and solution](solutions/system_design/social_graph/README.md)
+[Voir l'exercice et la solution](solutions/system_design/social_graph/README.md)
 
 ![Imgur](images/cdCv5g7.png)
 
-### Design a key-value store for a search engine
+### Concevoir un stockage clef-valeur pour un moteur de recherche
 
-[View exercise and solution](solutions/system_design/query_cache/README.md)
+[Voir l'exercice et la solution](solutions/system_design/query_cache/README.md)
 
 ![Imgur](images/4j99mhe.png)
 
-### Design Amazon's sales ranking by category feature
+### Concevoir le classement des ventes d'Amazon par la fonctionnalité categorie
 
-[View exercise and solution](solutions/system_design/sales_rank/README.md)
+[Voir l'exercice et la solution](solutions/system_design/sales_rank/README.md)
 
 ![Imgur](images/MzExP06.png)
 
-### Design a system that scales to millions of users on AWS
+### Concevoir un systeme qui se met à l'échelle pour des millions d'utilisateurs sur AWS
 
-[View exercise and solution](solutions/system_design/scaling_aws/README.md)
+[Voir l'exercice et la solution](solutions/system_design/scaling_aws/README.md)
 
 ![Imgur](images/jj3A5N8.png)
 
-## Object-oriented design interview questions with solutions
+## Questions d'entretien sur la conception orientée objet avec les réponses
 
-> Common object-oriented design interview questions with sample discussions, code, and diagrams.
+> Questions d'entretien sur la conception orientée objet, avec des extraits de discussions, de code et des digrammes.
 >
-> Solutions linked to content in the `solutions/` folder.
+> Les liens des solutions pointent vers le contenu du répertoire `solutions/`.
 
->**Note: This section is under development**
+>**Note: cette section est en cours de développement**
 
 | Question | |
 |---|---|
@@ -372,93 +373,91 @@ Check out the following links to get a better idea of what to expect:
 
 ## System design topics: start here
 
-New to system design?
+Nouveau dans la conception de système?
 
-First, you'll need a basic understanding of common principles, learning about what they are, how they are used, and their pros and cons.
+Tout d'abord, vous aurez besoin d'une compréhension basique des principes communs, apprendre ce qu'ils sont, comment ils sont utilisés et leurs avantages et inconvénients.
 
-### Step 1: Review the scalability video lecture
+### Etape 1: Consulter la vidéo sur la scalabilité
 
 [Scalability Lecture at Harvard](https://www.youtube.com/watch?v=-W9F__D3oY4)
 
-* Topics covered:
-    * Vertical scaling
-    * Horizontal scaling
-    * Caching
-    * Load balancing
-    * Database replication
-    * Database partitioning
+* Les sujets couverts:
+    * Scalabilité verticale
+    * Scalabilité horizontale
+    * Mise en cache
+    * Répartition de charge (*Load balancing*)
+    * Réplication de base de données
+    * Partitionnement de base de données
 
-### Step 2: Review the scalability article
+### Etape 2: Consulter les articles sur la scalabilité
 
 [Scalability](https://web.archive.org/web/20221030091841/http://www.lecloud.net/tagged/scalability/chrono)
 
-* Topics covered:
+* Sujets couverts:
     * [Clones](https://web.archive.org/web/20220530193911/https://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones)
     * [Databases](https://web.archive.org/web/20220602114024/https://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database)
     * [Caches](https://web.archive.org/web/20230126233752/https://www.lecloud.net/post/9246290032/scalability-for-dummies-part-3-cache)
     * [Asynchronism](https://web.archive.org/web/20220926171507/https://www.lecloud.net/post/9699762917/scalability-for-dummies-part-4-asynchronism)
 
-### Next steps
+### Prochaines étapes
 
-Next, we'll look at high-level trade-offs:
+La suite, vous devrez regarder à haut niveau les compromis:
 
-* **Performance** vs **scalability**
-* **Latency** vs **throughput**
-* **Availability** vs **consistency**
+* **Performance** vs **scalabilité**
+* **Latence** vs **débit**
+* **Disponibilité** vs **cohérence**
 
-Keep in mind that **everything is a trade-off**.
+Gardez à l'esprit que **tout est une question de compromis**.
 
-Then we'll dive into more specific topics such as DNS, CDNs, and load balancers.
+Nous aborderons ensuite des sujets plus spécifiques tels que les DNS, CDNs et répartiteur de charge (*load balancer*).
 
-## Performance vs scalability
+## Performance vs scalabilité
 
-A service is **scalable** if it results in increased **performance** in a manner proportional to resources added. Generally, increasing performance means serving more units of work, but it can also be to handle larger units of work, such as when datasets grow.<sup><a href=http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html>1</a></sup>
+Un service est **scalable** si cela résulte d'une augmentation de **performance** proportionnelle aux resources ajoutées. Généralement, augmenter les performances signifie servir davantage d'unités de travail, mais cela peut également signifier gérer des unités de travail plus importantes, par exemple lorsque les ensembles de données augmentent.<sup><a href=http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html>1</a></sup>
 
-Another way to look at performance vs scalability:
+Une autre façon de voir la performance vs scalabilité:
+* Si vous avez un problème de **performance**, votre système est lent pour un seul utilisateur
+* Si vous avez un problème de **scalabilité**, votre système est rapide pour un seul utilisateur mais lent sous forte charge.
 
-* If you have a **performance** problem, your system is slow for a single user.
-* If you have a **scalability** problem, your system is fast for a single user but slow under heavy load.
-
-### Source(s) and further reading
+### Source(s) et lectures pour approfondir
 
 * [A word on scalability](http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html)
 * [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
 
-## Latency vs throughput
+## Latence vs débit
 
-**Latency** is the time to perform some action or to produce some result.
+**Latence** est le temps pour réaliser une action ou produire un résultat.
 
-**Throughput** is the number of such actions or results per unit of time.
+**Throughput** est le nombre de ce type d'action ou le nombre de résulat par unité de temps.
 
-Generally, you should aim for **maximal throughput** with **acceptable latency**.
+Généralement, vous devez cibler pour un **maximum de débit** avec une **latence acceptable**.
 
-### Source(s) and further reading
+### Source(s) et lectures pour approfondir
 
 * [Understanding latency vs throughput](https://community.cadence.com/cadence_blogs_8/b/fv/posts/understanding-latency-vs-throughput)
 
-## Availability vs consistency
+## Disponibilité vs cohérence
 
-### CAP theorem
+### Le théorème CAP 
 
 <p align="center">
   <img src="images/bgLMI2u.png">
   <br/>
-  <i><a href=http://robertgreiner.com/2014/08/cap-theorem-revisited>Source: CAP theorem revisited</a></i>
+  <i><a href=http://robertgreiner.com/2014/08/cap-theorem-revisited>Source: le CAP théorème revisité</a></i>
 </p>
 
-In a distributed computer system, you can only support two of the following guarantees:
+Dans un système informatique distribué, vous ne pouvez supporter que 2 des garantis suivantes:
 
-* **Consistency** - Every read receives the most recent write or an error
-* **Availability** - Every request receives a response, without guarantee that it contains the most recent version of the information
-* **Partition Tolerance** - The system continues to operate despite arbitrary partitioning due to network failures
+* **Cohérence** - Chaque lecture recoit la plus récente écriture ou une erreur.
+* **Disponibilité** - Chaque requête recoit une réponse, sans garantis qu'il contient la plus récente version de l'information
+* **Tolerance à la partition** - le système continue à opérer malgré des décisions arbitraires de partition causés par des erreurs réseaux.
 
-*Networks aren't reliable, so you'll need to support partition tolerance.  You'll need to make a software tradeoff between consistency and availability.*
+*Le réseaux n'est pas fiable, vous aurez donc besoin de supporter la tolérance à la partition. Vous devrez faire un compromis logiciel entre la cohérence et la disponibilité.*
 
-#### CP - consistency and partition tolerance
+#### CP - Cohérence (C) et tolérance à la partition (P)
+Attendre d'une réponse provenant d'un noeud partitionné peut résulter en des erreurs de *timeout*, délai expiré. CP est un bon choix si votre business requit des lectures et écritures atomiques.
 
-Waiting for a response from the partitioned node might result in a timeout error.  CP is a good choice if your business needs require atomic reads and writes.
-
-#### AP - availability and partition tolerance
+#### AP - Disponibilité (A) and partition tolerance (P)
 
 Responses return the most readily available version of the data available on any node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.
 
