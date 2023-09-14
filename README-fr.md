@@ -39,7 +39,7 @@ une **compétence obligatoire** évaluée lors du **processus d'entretien techni
 Quelques chapitres complémentaires pour se préparer aux entretiens:
 
 * [Guide d'apprentissage](#study-guide)
-* [COmment aborder les questions d'entretien de la conception des systèmes](#how-to-approach-a-system-design-interview-question)
+* [Comment aborder les questions d'entretien de la conception des systèmes](#how-to-approach-a-system-design-interview-question)
 * [Questions d'entretien sur la conception des systèmes, **avec leurs réponses**](#system-design-interview-questions-with-solutions)
 * [Questions d'entretien sur la conception orienté objet, **avec leurs réponses**](#object-oriented-design-interview-questions-with-solutions)
 * [Questions complémentaires sur la conception des systèmes](#additional-system-design-interview-questions)
@@ -84,7 +84,7 @@ Sentez vous libre de soumettre une pull requests pour aider:
 * Ajouter des nouvelles sections
 * [Traduction](https://github.com/donnemartin/system-design-primer/issues/28)
 
-Le contenu qui a besoin d'être améliorer est placé en [under development](#under-development).
+Le contenu qui a besoin d'être amélioré est placé en [under development](#under-development).
 
 Relisez le [le guide des contributions](CONTRIBUTING.md).
 
@@ -183,7 +183,7 @@ Relisez le [le guide des contributions](CONTRIBUTING.md).
 
 ## Guide d'apprentissage
 
-> Suggestions de sujets à consulter basé sur la chronologie de vos entretiens (courte, moyenne, longue terme).
+> Suggestions de sujets à consulter basées sur la chronologie de vos entretiens (courte, moyenne, longue terme).
 
 ![Imgur](images/OfVllex.png)
 
@@ -196,14 +196,14 @@ Ce que vous devez répondre à un entretien dépend de plusieurs variables telle
 * L'expérience que vous avez
 * Quel est votre parcours technique
 * Pour quel poste vous prétentez
-* pour quelle entreprise vous candidatez
+* Pour quelle entreprise vous candidatez
 * La chance
 
 On attend généralement des candidats expérimentés qu'ils aient une plus grande connaissance de la conception des systèmes.
-On attend des architectes ou des responsables d'équipes d'en connaître plus qu'un simple contributeur. Le top des entreprises technologiques ont tendances à faire une ou plusieurs entretiens successives sur la conception des systèmes.
+On attend des architectes ou des responsables d'équipes d'en connaître plus qu'un simple contributeur. Le top des entreprises technologiques ont tendances à faire un ou plusieurs entretiens successifs sur la conception des systèmes.
 
-Commencez par une approche générale et rentrer en profondeur dans quelques thèmes.
-Ca vous aidera à avoir de petites connaissances dans plein de sujets de conception différents. Ajustez le guide en fonction de votre chronologie des entretiens,  votre expérience, le poste pour lequel vous candidatez et l'entreprise visée.
+Commencez par une approche générale et rentrez en profondeur dans quelques thèmes.
+Ca vous aidera à avoir des petites connaissances dans plein de sujets de conception différente. Ajustez le guide en fonction de votre chronologie des entretiens, votre expérience, le poste pour lequel vous candidatez et l'entreprise visée.
 
 * **Préparation courte terme** - Visez **large** sur les sujets de conception de système.  Exercez vous en répondant à **quelques** questions d'entretien.
 * **Préparation moyen terme** - Visez **large** et **approfondir un peu** sur les sujets de conception de système. Exercez vous en répondant à **beaucoup** de questions d'entretien.
@@ -459,9 +459,9 @@ Attendre d'une réponse provenant d'un noeud partitionné peut résulter en des 
 
 #### AP - Disponibilité (A) and partition tolerance (P)
 
-Responses return the most readily available version of the data available on any node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.
+Les réponses retournent en lecture la version la plus disponible d'une donnée dans n'importe quel noeud qui ne serait pas le dernier à être mise à jour. L'écriture nécessite du temps à propager quand la partition doit être résolue.
 
-AP is a good choice if the business needs to allow for [eventual consistency](#eventual-consistency) or when the system needs to continue working despite external errors.
+AP est un bon choix si le business autorise une [éventuelle cohérence](#eventual-consistency) ou quand le système a besoin de continuer à fonctionner malgré les erreurs.
 
 ### Source(s) and further reading
 
@@ -470,115 +470,115 @@ AP is a good choice if the business needs to allow for [eventual consistency](#e
 * [CAP FAQ](https://github.com/henryr/cap-faq)
 * [The CAP theorem](https://www.youtube.com/watch?v=k-Yaq8AHlFA)
 
-## Consistency patterns
+## Les modèles de cohérences
 
-With multiple copies of the same data, we are faced with options on how to synchronize them so clients have a consistent view of the data.  Recall the definition of consistency from the [CAP theorem](#cap-theorem) - Every read receives the most recent write or an error.
+Avec plusieurs copies de la même donnée, on a plusieurs options pour les synchroniser pour que le client est une vue cohérente des données. 
+With multiple copies of the same data, we are faced with options on how to synchronize them so clients have a consistent view of the data.  Rappelez-vous de la définition de la cohérence du [théorème CAP](#cap-theorem) - Chaque lecture de la donnée reçoit l’écriture la plus récente ou une erreur.  
 
-### Weak consistency
+### Une faible cohérence
 
-After a write, reads may or may not see it.  A best effort approach is taken.
+Après une écriture, la lecture peut ou pas être vue. On prend alors l'approche du meilleur effort.
+Cette approche peut se traduire dans un système par le cache en mémoire. Une faible cohérence marche bien dans le monde réel pour des cases d'usages tels que VoIP, le chat vidéo, et les jeux vidéos mulijoueurs en temps réel. Par exemple, si vous avez un appel téléphonique et perdez la réception pendant quelques secondes, quand vous récupérez la connexion vous n'avez pas entendu ce qui a été dit pendant la perte de connexion.
 
-This approach is seen in systems such as memcached.  Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games.  For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.
+### Une cohérence éventuelle
 
-### Eventual consistency
+Après une écriture, la lecture ser éventuellement vue (tupiquement en milli-secondes). Les données seront répliqués en asynchrone.
 
-After a write, reads will eventually see it (typically within milliseconds).  Data is replicated asynchronously.
+Cette approche est vue dans des sytèmes tels que les DNS et les emails. L'éventuelle cohérence marche bien sur les systèmes à haute disponibilité.
 
-This approach is seen in systems such as DNS and email.  Eventual consistency works well in highly available systems.
+### Cohérence forte
 
-### Strong consistency
+Après une écriture, la lecture le verra. La donnée est répliquée en synchrone.
 
-After a write, reads will see it.  Data is replicated synchronously.
-
-This approach is seen in file systems and RDBMSes.  Strong consistency works well in systems that need transactions.
+Cette approche est vue dans les sytèmes de fichiers et RDBMS. Une forte cohérence marche bien dans les systèmes qui nécessite des transactions.
 
 ### Source(s) and further reading
 
 * [Transactions across data centers](http://snarfed.org/transactions_across_datacenters_io.html)
 
-## Availability patterns
+## Modèle de disponibilité
 
-There are two complementary patterns to support high availability: **fail-over** and **replication**.
+Il y a 2 modèles complémentaires qui supportent la haute disponibilité:
+**la bascule par l'échec** (*fail-over*) et la **réplication**.
 
 ### Fail-over
 
-#### Active-passive
+#### Actif-passif
+Avec un fail-over en actif-passif, les tests de vies sont envoyés entre le serveur actif et le sereur passif en attente. Si le test de vie est interrompu, le serveur passif prend l'adresse IP actif et rend le service.
 
-With active-passive fail-over, heartbeats are sent between the active and the passive server on standby.  If the heartbeat is interrupted, the passive server takes over the active's IP address and resumes service.
+La durée de l'arrêt de service est déterminé par si le serveur passif est déjà dans un statut à chaud en attente ou s'il a besoin de faire démarrage depuis un état à froid, à l'arrêt. Seul un serveur actif peut répondre au traffic.
 
-The length of downtime is determined by whether the passive server is already running in 'hot' standby or whether it needs to start up from 'cold' standby.  Only the active server handles traffic.
+Le *failover* Actif-Passif est également nommé sous le terme maître-esclave *failover*.
 
-Active-passive failover can also be referred to as master-slave failover.
+#### Actif-actif
+Dans un mode actif-actif, les deux serveurs gérent le traffic, éparpillé entre eux.
 
-#### Active-active
+Si le serveur est public, le DNS devra connaître les IP public des deux serveurs. Si le serveur est exposé en interne, l'application logique devra connaître les deux serveurs.
 
-In active-active, both servers are managing traffic, spreading the load between them.
+Actif-actif *failover* est appelé également maître-maître *failover*.
 
-If the servers are public-facing, the DNS would need to know about the public IPs of both servers.  If the servers are internal-facing, application logic would need to know about both servers.
+### Désavantage(s): failover
 
-Active-active failover can also be referred to as master-master failover.
-
-### Disadvantage(s): failover
-
-* Fail-over adds more hardware and additional complexity.
-* There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.
+* Le Fail-over ajoute plus de hardware et de complexité.
+* Il y a une perte potentielle des données si le système actif tombe avant que les nouvelles données écrites soient répliquées sur le passif.
 
 ### Replication
 
-#### Master-slave and master-master
+#### Maître-esclave et maître-maître
 
-This topic is further discussed in the [Database](#database) section:
+Ce sujet est également discuté topic dans la section [Database](#database):
 
 * [Master-slave replication](#master-slave-replication)
 * [Master-master replication](#master-master-replication)
 
-### Availability in numbers
+### La disponibilité en chiffre
 
-Availability is often quantified by uptime (or downtime) as a percentage of time the service is available.  Availability is generally measured in number of 9s--a service with 99.99% availability is described as having four 9s.
+La disponibilité d'un service est souvent quantifiée par l'état actif (ou inactif). Elle est calculée en pourcentage de temps disponible.
+La disponiblité est généralement mesurée au nombre de 9. Un service avec 99.99% de disponiblité est aussi appelée comme avoir les quatre 9.
 
-#### 99.9% availability - three 9s
+#### Disponiblité à 99.9% - trois 9
 
-| Duration            | Acceptable downtime|
-|---------------------|--------------------|
-| Downtime per year   | 8h 45min 57s       |
-| Downtime per month  | 43m 49.7s          |
-| Downtime per week   | 10m 4.8s           |
-| Downtime per day    | 1m 26.4s           |
+| Durée                     | Temps inactif acceptable |
+|---------------------------|--------------------------|
+| temps inactif par an      | 8h 45min 57s             |
+| temps inactif par mois    | 43m 49.7s                |
+| temps inactif par semaine | 10m 4.8s                 |
+| temps inactif par jour    | 1m 26.4s                 |
 
-#### 99.99% availability - four 9s
+#### Disponiblité à 99.99% - quatre 9
 
-| Duration            | Acceptable downtime|
-|---------------------|--------------------|
-| Downtime per year   | 52min 35.7s        |
-| Downtime per month  | 4m 23s             |
-| Downtime per week   | 1m 5s              |
-| Downtime per day    | 8.6s               |
+| Durée                     | Temps inactif acceptable |
+|---------------------------|--------------------------|
+| temps inactif par an      | 52min 35.7s              |
+| temps inactif par mois    | 4m 23s                   |
+| temps inactif par semaine | 1m 5s                    |
+| temps inactif par jour    | 8.6s                     |
 
-#### Availability in parallel vs in sequence
+#### la disponibilité par parallélisation Vs par séquence
 
-If a service consists of multiple components prone to failure, the service's overall availability depends on whether the components are in sequence or in parallel.
+Si un service est constitué de plusieurs composants pouvant tomber en échec, la disponibilité de l'ensemble du service dépend si les composants sont en séquence ou en parallèle.
 
-###### In sequence
+###### En séquence
 
-Overall availability decreases when two components with availability < 100% are in sequence:
-
-```
-Availability (Total) = Availability (Foo) * Availability (Bar)
-```
-
-If both `Foo` and `Bar` each had 99.9% availability, their total availability in sequence would be 99.8%.
-
-###### In parallel
-
-Overall availability increases when two components with availability < 100% are in parallel:
+L'ensemble de la disponbilité décroit quand deux composants avec une disponiblité < 100% sont en séquence:
 
 ```
-Availability (Total) = 1 - (1 - Availability (Foo)) * (1 - Availability (Bar))
+Disponibilité (Total) = Disponibilité (Foo) * Disponibilité (Bar)
 ```
 
-If both `Foo` and `Bar` each had 99.9% availability, their total availability in parallel would be 99.9999%.
+Si `Foo` et `Bar` ont chacun une disponibilité de 99.9% , alors leur disponibilité totale en séquence sera 99.8%.
 
-## Domain name system
+###### En parallèle
+
+L'ensemble de la disponbilité croit quand deux composants avec une disponiblité < 100% sont en parallèle:
+
+```
+Disponibilité (Total) = 1 - (1 - Disponibilité (Foo)) * (1 - Disponibilité (Bar))
+```
+
+Si `Foo` et `Bar` ont chacun une disponibilité de 99.9%, alors leur disponibilité totale en parallèle sera 99.9999%.
+
+## Système de nom de domaine (DNS)
 
 <p align="center">
   <img src="images/IOyLj4i.jpg">
@@ -586,29 +586,29 @@ If both `Foo` and `Bar` each had 99.9% availability, their total availability in
   <i><a href=http://www.slideshare.net/srikrupa5/dns-security-presentation-issa>Source: DNS security presentation</a></i>
 </p>
 
-A Domain Name System (DNS) translates a domain name such as www.example.com to an IP address.
+Un système de nom de domaine (DNS) traduit un nom de domaine tel que www.example.com en une addresse IP.
 
-DNS is hierarchical, with a few authoritative servers at the top level.  Your router or ISP provides information about which DNS server(s) to contact when doing a lookup.  Lower level DNS servers cache mappings, which could become stale due to DNS propagation delays.  DNS results can also be cached by your browser or OS for a certain period of time, determined by the [time to live (TTL)](https://en.wikipedia.org/wiki/Time_to_live).
+DNS est hiérarchique, avec quelques serveurs d'autorités au top niveau. Votre routeur ou ISP fournit des informations à propos de quel(s) serveur(s) DNS à contacter quand vous faites une recherche. Des serveurs DNS de plus bas niveau stocke en cache la correspondance, qui peuvent commencer à être obsolètes à cause du délai de prograpation des DNS. Les résultats DNS peuvent aussi être stockés en cache par votre navigateur ou l'OS pour une certaine période de temps déterminée par la [durée de vie (*time to live:* TTL)](https://en.wikipedia.org/wiki/Time_to_live).
 
-* **NS record (name server)** - Specifies the DNS servers for your domain/subdomain.
-* **MX record (mail exchange)** - Specifies the mail servers for accepting messages.
-* **A record (address)** - Points a name to an IP address.
-* **CNAME (canonical)** - Points a name to another name or `CNAME` (example.com to www.example.com) or to an `A` record.
+* **Enregistrement NS (name server)** - spécifie le serveur DNS pour votre domaine/sous-domaine.
+* **Enregistrement MX record (mail exchange)** - Spécifie le serveur mail pour les messages acceptés.
+* **Enregistrement A (address)** - Pointe un nom sur une adresse IP.
+* **CNAME (canonical)** - Pointe un nom sur un autre nom ou `CNAME` (example.com vers www.example.com) ou vers un enregistrement `A`.
 
-Services such as [CloudFlare](https://www.cloudflare.com/dns/) and [Route 53](https://aws.amazon.com/route53/) provide managed DNS services.  Some DNS services can route traffic through various methods:
+Des services tels que [CloudFlare](https://www.cloudflare.com/dns/) et [Route 53](https://aws.amazon.com/route53/) fournissent des services DNS managés. Quelques services DNS peuvent rediriger le traffic à travers différentes méthodes:
 
 * [Weighted round robin](https://www.jscape.com/blog/load-balancing-algorithms)
-    * Prevent traffic from going to servers under maintenance
-    * Balance between varying cluster sizes
+    * Prévient le traffic d'aller vers des serveurs en maintenance
+    * Balance varie entre les tailles des clusters.
     * A/B testing
 * [Latency-based](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency)
 * [Geolocation-based](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
 
-### Disadvantage(s): DNS
+### Désavantage(s): DNS
 
-* Accessing a DNS server introduces a slight delay, although mitigated by caching described above.
-* DNS server management could be complex and is generally managed by [governments, ISPs, and large companies](http://superuser.com/questions/472695/who-controls-the-dns-servers/472729).
-* DNS services have recently come under [DDoS attack](http://dyn.com/blog/dyn-analysis-summary-of-friday-october-21-attack/), preventing users from accessing websites such as Twitter without knowing Twitter's IP address(es).
+* Accédé au serveur DNS introduit un léger délai, malgré la remédiation par les méthodes de cache décrites ci-dessus.
+* La gestion d'un serveur DNS peut être complexe et est généralement géré par des [gouvernements, ISPs, et grandes compagnies](http://superuser.com/questions/472695/who-controls-the-dns-servers/472729).
+* Les services de DNS sont récemment soumises à des [attaques par DDoS](http://dyn.com/blog/dyn-analysis-summary-of-friday-october-21-attack/), en empechant les utilisateurs d'accéder à des sites web tels que Twitter ne connaissant pas les adresses IPs de  Twitter.
 
 ### Source(s) and further reading
 
